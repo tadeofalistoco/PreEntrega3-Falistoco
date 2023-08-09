@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!-- Link de CSS -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Home | PrimarGym</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navegador">
+            <!-- Logo -->
+            <a href="index.html">
+              <div>
+                  <img src="img/Logo-proyecto.png"  alt="Logo">
+              </div>
+            </a>
+            <!-- Barra de navegacion -->
+            <ul class="lista-navegador">
+                <li class="nav-de-desktop">
+                    <a href="index.html">Home</a>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown nav-de-desktop">
+                    <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Maquinas</a>
+                    <ul class="dropdown-menu dropdown-padre">
+                        <li><a class="dropdown-hijas" href="pages/tren_superior.html">Tren Superior</a></li>
+                        <li><a class="dropdown-hijas" href="pages/tren_inferior.html">Tren Inferior</a></li>
+                        <li><a class="dropdown-hijas" href="pages/peso_libre.html">Peso Libre</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-de-desktop">
+                    <a href="pages/contacto_sucursales.html">Contacto y Sucursales</a>
+                </li>
+
+                <!-- Menu hamburguesa -->
+                <li class="menu-hamburguesa">
+                  <div class="nav-item dropdown">
+                    <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img width="40px" src="img/Icono-hamburguesa.png" alt="">
+                    </a>
+                    <ul class="dropdown-menu dropdown-padre lista-navegador-hamburguesa">
+                      <li class="item-hamburguesa">
+                          <a class="hamburguesa-active" href="index.html">Home</a>
+                      </li>
+      
+                      <li class="item-hamburguesa">
+                        <a href="">Maquinas:</a> 
+                        <ul class="maquinas-mq">
+                            <li><a class="hamburguesa-active" href="pages/tren_superior.html">Tren Superior</a></li>
+                            <li><a class="hamburguesa-active" href="pages/tren_inferior.html">Tren Inferior</a></li>
+                            <li><a class="hamburguesa-active" href="pages/peso_libre.html">Peso Libre</a></li>
+                        </ul>
+                      </li>
+      
+                      <li class="item-hamburguesa">
+                          <a class="hamburguesa-active" href="pages/contacto_sucursales.html">Contacto y Sucursales</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="mis-encabezados">NOVEDADES</h1>
+    </header>
+    
+    <main>
+        <!-- Carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide mi-carrusel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="pages/tren_superior.html">
+                  <img src="img/Poleas-Cerradas.png" class="d-block imagen-del-carrusel" alt="Poleas Poleas Cerradas">
+                </a>
+                <div class="texto-carrusel">
+                  <p class="h-carrusel">Poleas Cerradas</p>
+                  <p>Incluye barra de dominadas y accesorios</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <a href="pages/tren_inferior.html">
+                  <img src="img/Camilla-Femoral.png" class="d-block imagen-del-carrusel" alt="Camilla Femoral">
+                </a>
+                <div class="texto-carrusel">
+                  <p class="h-carrusel">Camilla de Femoral</p>
+                  <p>Asiento y rango de movimiento regulables</p>
+                </div>                
+              </div>
+              <div class="carousel-item">
+                <a href="pages/tren_superior.html">
+                  <img src="img/Press-Hombro.png" class="d-block imagen-del-carrusel" alt="Press Hombro">
+                </a>
+                <div class="texto-carrusel">
+                  <p class="h-carrusel">Press de hombros</p>
+                  <p>Mejores angulos para una mayor contracción</p>
+                </div>                
+              </div>
+
+              <div class="carousel-indicators item-relative">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+
+    <footer>
+      <p class="mi-footer">Todos los derechos reservados.</p>
+      <p class="mi-footer">El formato de esta página es de catálogo. Para efectuar una compra acérquese a cualquiera de nuestras sucursales de Lunes a Sábados entre las 10 y las 20 hs.</p>          
+    </footer>
+    
+    <!-- Script de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

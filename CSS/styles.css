@@ -1,0 +1,151 @@
+/* ESTILOS DEL BODY */
+header nav .lista-navegador, header nav .lista-navegador .menu-hamburguesa div .lista-navegador-hamburguesa .item-hamburguesa .maquinas-mq {
+  /* Extend */
+  background-color: black;
+  list-style: none; }
+
+* {
+  box-sizing: border-box;
+  color: white;
+  background-color: #0f0f0f; }
+
+/* ESTILOS DEL NAV */
+header .mis-encabezados {
+  color: #d5da1b;
+  font-weight: 700;
+  margin: 0;
+  padding: 20px; }
+
+header .navegador {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  height: 72.5px; }
+
+header nav .lista-navegador {
+  margin: 0px 150px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 72.5px;
+  font-size: 20px;
+  font-weight: 500; }
+  header nav .lista-navegador .menu-hamburguesa {
+    display: none; }
+    header nav .lista-navegador .menu-hamburguesa div .lista-navegador-hamburguesa .item-hamburguesa {
+      padding: 0px 10px;
+      font-size: 15px; }
+      header nav .lista-navegador .menu-hamburguesa div .lista-navegador-hamburguesa .item-hamburguesa .hamburguesa-active:active {
+        background-color: #ebf066;
+        color: black;
+        display: block; }
+  header nav .lista-navegador li {
+    background-color: black; }
+    header nav .lista-navegador li .dropdown-padre {
+      background-color: #0a0a0a;
+      height: 120px;
+      border: 2px solid #ebf066; }
+      header nav .lista-navegador li .dropdown-padre .dropdown-hijas {
+        display: block;
+        text-align: justify;
+        background-color: #0a0a0a;
+        margin: 3px;
+        padding: 3px; }
+      header nav .lista-navegador li .dropdown-padre .dropdown-hijas:hover {
+        background-color: #ebf066;
+        color: black; }
+
+header a {
+  text-decoration: none;
+  color: #d5da1b;
+  background-color: black; }
+
+/* ESTILOS DEL MAIN */
+main {
+  padding-bottom: 30px; }
+  main .mi-carrusel {
+    border-top: 20px solid #0f0f0f; }
+    main .mi-carrusel div div a .imagen-del-carrusel {
+      width: 400px;
+      margin: 0 auto; }
+    main .mi-carrusel div div .texto-carrusel {
+      display: flex;
+      text-align: center;
+      margin: 25px 0px 35px;
+      flex-direction: column;
+      justify-content: center; }
+      main .mi-carrusel div div .texto-carrusel .h-carrusel {
+        margin-bottom: 5px;
+        font-size: 19px;
+        font-weight: 650; }
+  main .mi-catalogo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px;
+    gap: 30px; }
+    main .mi-catalogo .tarjetas {
+      width: 18rem;
+      border: solid 5px #3d3d3d; }
+  main .redes-sociales {
+    padding: 10px 30px 30px; }
+    main .redes-sociales div .lista-contacto {
+      list-style: none; }
+      main .redes-sociales div .lista-contacto li {
+        margin: 10px 0px; }
+  main .mis-sucursales {
+    padding: 10px 30px 30px;
+    display: grid;
+    gap: 20px; }
+    main .mis-sucursales div .sucursal {
+      padding: 1rem 0px; }
+      main .mis-sucursales div .sucursal .mapa {
+        height: 300px; }
+
+/* ESTILOS DEL FOOTER */
+footer {
+  display: grid;
+  text-align: center;
+  align-content: center;
+  background-color: black;
+  height: 130px; }
+  footer .mi-footer {
+    background-color: black;
+    font-size: small; }
+
+/* MQ tablet */
+@media screen and (max-width: 1024px) {
+  header nav .lista-navegador {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: 0px 30px; }
+    header nav .lista-navegador .nav-de-desktop {
+      display: none; }
+    header nav .lista-navegador .menu-hamburguesa {
+      display: inline; }
+      header nav .lista-navegador .menu-hamburguesa div .lista-navegador-hamburguesa {
+        width: 220px; }
+        header nav .lista-navegador .menu-hamburguesa div .lista-navegador-hamburguesa .item-hamburguesa {
+          padding: 0px 10px;
+          font-size: 19px; }
+    header nav .lista-navegador li .dropdown-padre {
+      height: 190px; }
+  main .mi-catalogo {
+    grid-template-columns: repeat(2, 1fr); }
+    main .mi-catalogo .tarjetas {
+      width: 20rem; }
+  main .mis-sucursales div .sucursal .mapa {
+    height: 300px; } }
+
+/* MQ mobile */
+@media screen and (max-width: 450px) {
+  main .mi-catalogo {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center; }
+  main .mi-carrusel div div a .imagen-del-carrusel {
+    width: 300px; } }
+
+header nav .lista-navegador, header nav .lista-navegador .menu-hamburguesa div .lista-navegador-hamburguesa .item-hamburguesa .maquinas-mq {
+  /* Extend */
+  background-color: black;
+  list-style: none; }

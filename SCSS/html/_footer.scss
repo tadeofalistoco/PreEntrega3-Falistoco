@@ -1,0 +1,15 @@
+/* ESTILOS DEL FOOTER */
+@import "../utilidades/mixin";
+
+footer{
+    // Mixin
+    @include alineacion(grid, center);
+    align-content: center;
+    background-color: black;
+    height: 130px;
+
+    .mi-footer{
+        background-color: black;
+        font-size: small;
+    }
+}

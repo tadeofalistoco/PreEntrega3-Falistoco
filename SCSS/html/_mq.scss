@@ -1,0 +1,87 @@
+/* MQ tablet */
+@media screen and (max-width:1024px) {
+    // Estilos del header
+    header{
+        nav{
+            .lista-navegador{
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                margin: 0px 30px;
+
+                .nav-de-desktop{
+                    display: none;
+                }
+                
+                .menu-hamburguesa{
+                    display: inline;
+
+                    div{
+                        .lista-navegador-hamburguesa{
+                            width: 220px;
+
+                            .item-hamburguesa{
+                                padding: 0px 10px;
+                                font-size: 19px;        
+                            }
+                        }
+    
+                    }
+                }
+
+                li{
+                    .dropdown-padre{
+                        height: 190px;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    // Estilos del main
+    main{
+        .mi-catalogo{
+            grid-template-columns: repeat(2, 1fr);
+            
+            .tarjetas{
+                width: 20rem;
+            }
+        }
+        
+        .mis-sucursales{
+            div{
+                .sucursal{
+                    .mapa{
+                        height: 300px;
+                    }
+                }
+            }
+        }
+    }        
+}
+
+
+/* MQ mobile */
+@media screen and (max-width:450px) {
+    // Estilos del main
+    main{
+        .mi-catalogo{
+            grid-template-columns: repeat(1, 1fr);
+            justify-items: center;
+        }
+
+        .mi-carrusel{
+            div{
+                div{
+                    a{
+                        .imagen-del-carrusel{
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

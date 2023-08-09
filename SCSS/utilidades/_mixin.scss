@@ -1,0 +1,7 @@
+// Mixin
+
+// Mixin con parametros
+@mixin alineacion($display, $text-align){
+    display: $display;
+    text-align: $text-align;
+}

@@ -1,0 +1,97 @@
+/* ESTILOS DEL BODY */ 
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+@import "../utilidades/extend";
+
+*{
+    box-sizing: border-box;
+    color: white;
+    // Variables
+    background-color: $mi-fondo;
+}
+
+/* ESTILOS DEL NAV */ 
+header{
+    .mis-encabezados{
+        color: $color-navegador;
+        font-weight: 700;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .navegador{
+        background-color: black;
+        display: flex;
+        justify-content: space-between;
+        height: 72.5px;
+    }
+
+    nav{
+        .lista-navegador{
+            @extend %lista-bc-black;
+            margin: 0px 150px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: center;
+            height: 72.5px;
+            font-size: 20px;
+            font-weight: 500;
+            
+            .menu-hamburguesa{
+                display: none;
+                
+                div{
+                    .lista-navegador-hamburguesa{
+                        .item-hamburguesa{
+                            padding: 0px 10px;
+                            font-size: 15px;
+                            
+                            .hamburguesa-active:active{
+                                background-color: $fondo-hover;
+                                color: black;
+                                display: block; 
+
+                            }
+
+                            .maquinas-mq{
+                                @extend %lista-bc-black;
+                            }
+
+                        }
+
+                    }
+                }
+            }
+            
+            li{
+                background-color: black;
+
+                .dropdown-padre{
+                    background-color: rgb(10, 10, 10);
+                    height: 120px;
+                    border: 2px solid $fondo-hover;
+                    
+                    .dropdown-hijas{
+                        // Mixin
+                        @include alineacion(block, justify);
+                        background-color: rgb(10, 10, 10);
+                        margin: 3px;
+                        padding: 3px;
+                    
+                    }
+                    
+                    .dropdown-hijas:hover{
+                        background-color: $fondo-hover;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    
+    a{
+        text-decoration: none;
+        color: $color-navegador;
+        background-color: black;
+    }
+}

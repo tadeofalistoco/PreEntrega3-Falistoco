@@ -1,0 +1,82 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+/* ESTILOS DEL MAIN */
+main{
+    padding-bottom: 30px;
+
+    // Estilos del carrusel de index
+    .mi-carrusel{
+        // Variables
+        border-top: 20px solid $mi-fondo;
+
+        div{
+            div{
+                a{
+                    .imagen-del-carrusel{
+                        width: 400px;
+                        margin: 0 auto;
+                    }
+                }
+                
+                .texto-carrusel{
+                    // Mixin
+                    @include alineacion(flex, center);
+                    margin: 25px 0px 35px;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    .h-carrusel{
+                        margin-bottom: 5px;
+                        font-size: 19px;
+                        font-weight: 650;
+                    }
+                }
+            }
+        }
+    }
+    
+    // Estilos de las cards de maquinas
+    .mi-catalogo{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 30px;
+        gap: 30px;
+        
+        .tarjetas{
+            width: 18rem;
+            border: solid 5px rgb(61, 61, 61);
+        }
+    }
+
+    // Estilos de contacto y sucursales
+    .redes-sociales{
+        padding: 10px 30px 30px;
+
+        div{
+            .lista-contacto{
+                list-style: none;
+                
+                li{
+                    margin: 10px 0px;
+                }
+            }
+        }
+    }
+
+    .mis-sucursales{
+        padding: 10px 30px 30px;
+        display: grid;
+        gap: 20px;
+
+        div{
+            .sucursal{
+                padding: 1rem 0px;
+
+                .mapa{
+                    height: 300px;
+                }
+            }            
+        }
+    }
+}
