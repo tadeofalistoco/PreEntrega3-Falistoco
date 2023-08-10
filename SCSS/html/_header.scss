@@ -67,14 +67,14 @@ header{
                 background-color: black;
 
                 .dropdown-padre{
-                    background-color: rgb(10, 10, 10);
+                    background-color: $fondo-dropdown;
                     height: 120px;
                     border: 2px solid $fondo-hover;
                     
                     .dropdown-hijas{
                         // Mixin
                         @include alineacion(block, justify);
-                        background-color: rgb(10, 10, 10);
+                        background-color: $fondo-dropdown;
                         margin: 3px;
                         padding: 3px;
                     

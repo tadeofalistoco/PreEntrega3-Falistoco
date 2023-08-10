@@ -12,11 +12,44 @@ main{
 
         div{
             div{
-                a{
+                .contenedor-carrusel{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+
                     .imagen-del-carrusel{
                         width: 400px;
                         margin: 0 auto;
+                        transition: 1s;
+                        z-index: 2;
+                        border: solid black 5px;
                     }
+
+                    .descripcion-imagen-del-carrusel{
+                        width: 400px;
+                        height: 400px;
+                        padding: 20px;
+                        background-color: $fondo-dropdown;
+                        margin: 0 auto;
+                        transition: 1s;
+                        z-index: 1;
+                        position: absolute;
+                        top: 0;
+                        border: solid #f6ff009c 4px;
+                        border-radius: 7px;
+                        opacity: 0;
+                    }
+                }
+
+                .contenedor-carrusel:hover .imagen-del-carrusel{
+                    transform: translateX(-50%);
+                    transition: 1s;
+                }
+
+                .contenedor-carrusel:hover .descripcion-imagen-del-carrusel{
+                    transform: translate(50%);
+                    transition: 1s;
+                    opacity: 1;
                 }
                 
                 .texto-carrusel{
@@ -46,6 +79,66 @@ main{
         .tarjetas{
             width: 18rem;
             border: solid 5px rgb(61, 61, 61);
+            position: relative;
+            perspective: 1000px;
+            transition: 1s;
+
+            .descripcion-card{
+                position: absolute;
+                transition: 1s;
+                transform: rotateY(180deg);
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                background-color: #707417;
+                opacity: 0;
+            }
+        }
+
+        // Transformación
+        .tarjetas:hover .descripcion-card{
+            opacity: 1;
+            transition: 1s;
+        }
+
+        .tarjetas:hover{
+            transform: rotateY(180deg);
+            transition: 1s;
+        }
+
+        // Animación
+        .articulo-nuevo{
+            .alerta-articulo-nuevo{
+                animation-name: maquina-nueva;
+                animation-duration: 3s;
+                animation-delay: 0.3s;
+
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: yellow;
+                color: black;
+                font-size: 60px;
+                font-family: 'Anton', sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+            }
+        }
+
+        @keyframes maquina-nueva{
+            0%{
+                opacity: 0;
+            }
+
+            50%{
+                opacity: 1;
+            }
+
+            100%{
+                opacity: 0;
+            }
         }
     }
 
